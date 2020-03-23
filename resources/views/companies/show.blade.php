@@ -12,7 +12,7 @@
     </div>
 
     <div class="row" style="background: white; margin: 10px;">
-        @foreach($comapny->projects as $project)
+        @foreach($company->projects as $project)
         <div class="col-md-4">
             <h2>{{ $project->name }}</h2>
             <p>{{ $project->description }}</p>
