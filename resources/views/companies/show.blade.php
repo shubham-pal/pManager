@@ -29,6 +29,7 @@
     </div> -->
     <div class="sidebar-module">
         <h4>Actions</h4>
+        <hr>
         <ol class="list-unstyled">
             <li><a href="/companies/{{ $company->id }}/edit">Edit</a></li>
             <li>
@@ -38,7 +39,7 @@
                     {{ csrf_field() }}
                 </form>
             </li>
-            <li><a href="#">Add new member</a></li>
+            <li><a href="/projects/create">Add Project</a></li>
             <li><a href="/companies">All Companies</a></li>
         </ol>
     </div>
