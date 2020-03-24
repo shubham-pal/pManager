@@ -85,7 +85,7 @@ class CompaniesController extends Controller
             ->with('success', 'Company updated successfully');
         }
 
-        return back()->withInput();
+        return back()->withInput()->with('error', 'Error in updating company.');
     }
 
     /**
@@ -96,6 +96,13 @@ class CompaniesController extends Controller
      */
     public function destroy(Company $company)
     {
-        //
+        $findCompany = Company::find($company->id);
+
+        if ($findCompany->delete()) {
+            return redirect()->route('companies.index', ['company' => $company->id])
+            ->with('success', 'Company deleted successfully.');
+        }
+
+        return back()->withInput()->with('error', 'Company could not be deleted.');
     }
 }

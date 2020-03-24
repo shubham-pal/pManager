@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 $factory->define(Project::class, function (Faker $faker) {
     return [
         'name' => $faker->safeColorName(),
-        'description' => Str::random(10)." ".Str::random(8)." ".Str::random(8),
+        'description' => $faker->text,
         'days' => random_int(1, 100),
     ];
 });

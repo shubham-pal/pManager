@@ -9,6 +9,6 @@ use Illuminate\Support\Str;
 $factory->define(Company::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
-        'description' => Str::random(50)
+        'description' => $faker->text()
     ];
 });
