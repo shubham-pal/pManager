@@ -4,7 +4,7 @@
 
 <div class="col-md-6 col-lg-6 offset-md-4 offset-lg-3">
     <div class="card text-white bg-primary mb-3">
-        <div class="card-header"><h2>Companies<a href="/companies/create" class="float-right btn btn-primary waves-effect">Add New Company</a></h2></div>
+        <div class="card-header"><h2>Companies<a href="/companies/create" class="float-right btn btn-primary waves-effect">Add New</a></h2></div>
         <div class="card-body bg-white">
             <ul class="list-group">
             @foreach($companies as $company)

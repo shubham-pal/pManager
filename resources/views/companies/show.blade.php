@@ -12,8 +12,11 @@
     </div>
 
     <div class="row" style="background: white; margin: 10px;">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <a href="/projects/create" class="float-right btn btn-primary btn-sm">Add Project</a>
+        </div>
         @foreach($company->projects as $project)
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-4">
             <h2>{{ $project->name }}</h2>
             <p>{{ $project->description }}</p>
             <p><a class="btn btn-secondary" href="/projects/{{ $project->id }}" role="button">View Project details &raquo;</a></p>

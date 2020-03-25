@@ -15,9 +15,13 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        $companies = Company::all();
+        if (Auth::check()) {
+            $companies = Company::where('user_id', Auth::user()->id)->get();
+    
+            return view('companies.index', ['companies' => $companies]);
+        }
 
-        return view('companies.index', ['companies' => $companies]);
+        return view('auth.login');
     }
 
     /**
@@ -63,7 +67,7 @@ class CompaniesController extends Controller
      */
     public function show(Company $company)
     {
-        $company = Company::find($company->id);
+        $company = Company::where($company->id);
 
         return view('companies.show', ['company' => $company]);
     }
