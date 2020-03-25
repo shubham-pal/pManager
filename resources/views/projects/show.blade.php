@@ -13,7 +13,7 @@
 
     <div class="row" style="background: white; margin: 10px;">
         <div class="col-lg-12 col-md-12 col-sm-12">
-            <a href="/projects/create/{{ $company->id }}" class="float-right btn btn-primary btn-sm">Add Project</a>
+            <a href="/projects/create" class="float-right btn btn-primary btn-sm">Add Project</a>
         </div>
         @foreach($company->projects as $project)
         <div class="col-lg-4 col-md-4">
@@ -42,7 +42,7 @@
                     {{ csrf_field() }}
                 </form>
             </li>
-            <li><a href="/projects/create/{{ $company->id }}">Add Project</a></li>
+            <li><a href="/projects/create">Add Project</a></li>
             <li><a href="/companies">All Companies</a></li>
         </ol>
     </div>
